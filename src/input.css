@@ -3,7 +3,99 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-     font-family: "poppins", sans-serif;
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Navigation */
+  .nav-link {
+    @apply text-slate-300 hover:text-white transition-colors duration-300 font-medium;
+  }
+  
+  .nav-link.active {
+    @apply text-white;
+  }
+  
+  .mobile-nav-link {
+    @apply block px-4 py-2 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all duration-300;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center px-8 py-4 bg-slate-700 text-white font-semibold rounded-full hover:bg-slate-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center px-8 py-4 bg-transparent border-2 border-slate-600 text-slate-300 font-semibold rounded-full hover:bg-slate-700 hover:text-white transform hover:scale-105 transition-all duration-300;
+  }
+  
+  /* Cards */
+  .glass-card {
+    @apply bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 rounded-2xl shadow-2xl hover:shadow-slate-500/10 transition-all duration-300 hover:border-slate-600/50;
+  }
+  
+  .project-card {
+    @apply bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-xl overflow-hidden hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-105 shadow-xl hover:shadow-2xl;
+  }
+  
+  .project-image {
+    @apply relative overflow-hidden;
+  }
+  
+  .project-overlay {
+    @apply absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+  }
+  
+  .project-link {
+    @apply w-12 h-12 bg-slate-700 text-white rounded-full flex items-center justify-center hover:bg-slate-600 transform hover:scale-110 transition-all duration-300;
+  }
+  
+  /* Typography */
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-white mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-slate-400 max-w-2xl mx-auto;
+  }
+  
+  /* Skills */
+  .skill-item {
+    @apply flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700/30 transition-colors duration-300;
+  }
+  
+  .tech-tag {
+    @apply px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded-full border border-slate-600/30;
+  }
+  
+  /* Social Links */
+  .social-link {
+    @apply w-12 h-12 bg-slate-800/50 text-slate-400 rounded-full flex items-center justify-center hover:bg-slate-700 hover:text-white transform hover:scale-110 transition-all duration-300 border border-slate-700 hover:border-slate-600;
+  }
+  
+  .social-link-large {
+    @apply w-16 h-16 bg-slate-800/50 text-slate-400 rounded-full flex items-center justify-center hover:bg-slate-700 hover:text-white transform hover:scale-110 transition-all duration-300 border border-slate-700 hover:border-slate-600;
+  }
+  
+  /* Animations */
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

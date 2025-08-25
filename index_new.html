@@ -11,19 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" referrerpolicy="no-referrer" />
 </head>
-<body class="min-h-screen antialiased text-white bg-slate-900">
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl bg-slate-900/90 border-slate-700/50">
-        <div class="container px-6 py-4 mx-auto">
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-slate-900/80 border-b border-purple-500/20">
+        <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
-                <a href="#home" class="text-2xl font-bold text-white">
+                <a href="#home" class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                     MAHIR MAHTAB
                 </a>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden space-x-8 md:flex">
+                <div class="hidden md:flex space-x-8">
                     <a href="#about" class="nav-link">About</a>
                     <a href="#skills" class="nav-link">Skills</a>
                     <a href="#projects" class="nav-link">Projects</a>
@@ -31,15 +31,15 @@
                 </div>
                 
                 <!-- Mobile Menu Toggle -->
-                <button id="menu-toggle" class="p-2 border rounded-lg md:hidden border-slate-600 bg-slate-800" aria-expanded="false">
-                    <i class="text-xl ri-menu-line" id="menu-btn"></i>
-                    <i class="hidden text-xl ri-close-line" id="menu-btn-2"></i>
+                <button id="menu-toggle" class="md:hidden p-2 rounded-lg border border-purple-500/30 bg-slate-800/50" aria-expanded="false">
+                    <i class="ri-menu-line text-xl" id="menu-btn"></i>
+                    <i class="ri-close-line text-xl hidden" id="menu-btn-2"></i>
                 </button>
             </div>
             
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden pb-4 mt-4 border-t md:hidden border-slate-700">
-                <div class="flex flex-col pt-4 space-y-2">
+            <div id="mobile-menu" class="md:hidden mt-4 pb-4 border-t border-purple-500/20 hidden">
+                <div class="flex flex-col space-y-2 pt-4">
                     <a href="#about" class="mobile-nav-link">About</a>
                     <a href="#skills" class="mobile-nav-link">Skills</a>
                     <a href="#projects" class="mobile-nav-link">Projects</a>
@@ -50,48 +50,51 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="flex items-center justify-center min-h-screen px-6 pt-20">
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
         <div class="container mx-auto">
-            <div class="grid items-center gap-12 lg:grid-cols-2">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <!-- Profile Image -->
-                <div class="relative order-2 group lg:order-1">
-                    <img src="./assets/IMG_2940.JPG" alt="Mahir Mahtab" class="object-cover mx-auto border-4 rounded-full shadow-2xl w-80 h-80 border-slate-600">
+                <div class="relative group order-2 lg:order-1">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-lg opacity-30 group-hover:opacity-40 transition-opacity"></div>
+                    <img src="./assets/IMG_2940.JPG" alt="Mahir Mahtab" class="relative w-80 h-80 mx-auto rounded-full border-4 border-purple-500/30 object-cover shadow-2xl">
                 </div>
                 
                 <!-- Hero Content -->
-                <div class="order-1 text-center lg:text-left lg:order-2">
+                <div class="text-center lg:text-left order-1 lg:order-2">
                     <div class="animate-fade-in-up">
-                        <p class="mb-4 text-lg font-medium text-slate-400">Hello, I'm</p>
-                        <h1 class="mb-6 text-5xl font-black text-white lg:text-7xl">
-                            Mahir Mahtab
+                        <p class="text-purple-300 text-lg mb-4 font-medium">Hello, I'm</p>
+                        <h1 class="text-5xl lg:text-7xl font-black mb-6">
+                            <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+                                Mahir Mahtab
+                            </span>
                         </h1>
-                        <h2 class="mb-8 text-2xl font-light lg:text-3xl text-slate-300">
+                        <h2 class="text-2xl lg:text-3xl text-slate-300 mb-8 font-light">
                             Full‑Stack Developer & Problem Solver
                         </h2>
-                        <p class="max-w-2xl mx-auto mb-10 text-lg leading-relaxed text-slate-400 lg:mx-0">
+                        <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                             Crafting digital experiences with modern web technologies. 
                             Passionate about clean code, scalable solutions, and continuous learning.
                         </p>
                         
                         <!-- CTA Buttons -->
-                        <div class="flex flex-col justify-center gap-4 mb-8 sm:flex-row lg:justify-start">
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                             <a href="./assets/Mahir.pdf" class="btn-primary">
-                                <i class="mr-2 ri-download-line"></i>
+                                <i class="ri-download-line mr-2"></i>
                                 Download Resume
                             </a>
                             <a href="#contact" class="btn-secondary">
-                                <i class="mr-2 ri-mail-line"></i>
+                                <i class="ri-mail-line mr-2"></i>
                                 Get In Touch
                             </a>
                         </div>
                         
                         <!-- Social Links -->
-                        <div class="flex justify-center gap-4 lg:justify-start">
+                        <div class="flex gap-4 justify-center lg:justify-start">
                             <a href="https://github.com/mahir-mahtab" class="social-link" aria-label="GitHub">
-                                <i class="text-xl ri-github-fill"></i>
+                                <i class="ri-github-fill text-xl"></i>
                             </a>
                             <a href="https://www.linkedin.com/in/mahir-mahtab-295b0a275" class="social-link" aria-label="LinkedIn">
-                                <i class="text-xl ri-linkedin-fill"></i>
+                                <i class="ri-linkedin-fill text-xl"></i>
                             </a>
                         </div>
                     </div>
@@ -101,19 +104,19 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="px-6 py-20">
+    <section id="about" class="py-20 px-6">
         <div class="container mx-auto">
-            <div class="mb-16 text-center">
+            <div class="text-center mb-16">
                 <h2 class="section-title">About Me</h2>
                 <p class="section-subtitle">Discover my journey and passion</p>
             </div>
             
-            <div class="grid items-center gap-12 lg:grid-cols-2">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8">
-                    <div class="p-8 glass-card">
+                    <div class="glass-card p-8">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-slate-700">
-                                <i class="text-xl text-white ri-code-s-slash-line"></i>
+                            <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                                <i class="ri-code-s-slash-line text-xl text-white"></i>
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold text-white">Experience</h3>
@@ -123,10 +126,10 @@
                         <p class="text-slate-300">Frontend & Backend development with modern technologies</p>
                     </div>
                     
-                    <div class="p-8 glass-card">
+                    <div class="glass-card p-8">
                         <div class="flex items-center gap-4 mb-4">
-                            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-slate-700">
-                                <i class="text-xl text-white ri-graduation-cap-line"></i>
+                            <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                                <i class="ri-graduation-cap-line text-xl text-white"></i>
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold text-white">Education</h3>
@@ -138,13 +141,13 @@
                 </div>
                 
                 <div class="text-center lg:text-left">
-                    <p class="mb-8 text-lg leading-relaxed text-slate-300">
+                    <p class="text-lg text-slate-300 leading-relaxed mb-8">
                         I'm passionate about creating seamless digital experiences that bridge the gap between 
                         design and functionality. My journey in competitive programming has sharpened my 
                         problem-solving skills, while hands-on projects have taught me the art of building 
                         scalable, maintainable applications.
                     </p>
-                    <p class="text-lg leading-relaxed text-slate-300">
+                    <p class="text-lg text-slate-300 leading-relaxed">
                         Currently expanding my expertise in full-stack development, I love exploring new 
                         technologies and contributing to meaningful projects that make a difference.
                     </p>
@@ -154,93 +157,93 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="px-6 py-20">
+    <section id="skills" class="py-20 px-6">
         <div class="container mx-auto">
-            <div class="mb-16 text-center">
+            <div class="text-center mb-16">
                 <h2 class="section-title">Technical Skills</h2>
                 <p class="section-subtitle">Technologies I work with</p>
             </div>
 
-            <div class="grid gap-8 lg:grid-cols-2">
+            <div class="grid lg:grid-cols-2 gap-8">
                 <!-- Frontend Skills -->
-                <div class="p-8 glass-card">
-                    <h3 class="mb-6 text-2xl font-bold text-center text-white">Frontend Development</h3>
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-bold text-white mb-6 text-center">Frontend Development</h3>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="skill-item">
-                            <i class="text-2xl text-orange-500 ri-html5-fill"></i>
+                            <i class="ri-html5-fill text-orange-500 text-2xl"></i>
                             <div>
                                 <h4 class="font-semibold text-white">HTML5</h4>
-                                <p class="text-sm text-slate-400">Expert</p>
+                                <p class="text-slate-400 text-sm">Expert</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="text-2xl text-blue-500 ri-css3-fill"></i>
+                            <i class="ri-css3-fill text-blue-500 text-2xl"></i>
                             <div>
                                 <h4 class="font-semibold text-white">CSS3</h4>
-                                <p class="text-sm text-slate-400">Advanced</p>
+                                <p class="text-slate-400 text-sm">Advanced</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="text-2xl text-yellow-500 ri-javascript-fill"></i>
+                            <i class="ri-javascript-fill text-yellow-500 text-2xl"></i>
                             <div>
                                 <h4 class="font-semibold text-white">JavaScript</h4>
-                                <p class="text-sm text-slate-400">Proficient</p>
+                                <p class="text-slate-400 text-sm">Proficient</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="text-2xl ri-reactjs-line text-cyan-500"></i>
+                            <i class="ri-reactjs-line text-cyan-500 text-2xl"></i>
                             <div>
                                 <h4 class="font-semibold text-white">React</h4>
-                                <p class="text-sm text-slate-400">Learning</p>
+                                <p class="text-slate-400 text-sm">Learning</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="text-2xl text-teal-500 ri-tailwind-css-fill"></i>
+                            <i class="ri-tailwind-css-fill text-teal-500 text-2xl"></i>
                             <div>
                                 <h4 class="font-semibold text-white">Tailwind CSS</h4>
-                                <p class="text-sm text-slate-400">Expert</p>
+                                <p class="text-slate-400 text-sm">Expert</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="text-2xl text-purple-500 ri-bootstrap-fill"></i>
+                            <i class="ri-bootstrap-fill text-purple-500 text-2xl"></i>
                             <div>
                                 <h4 class="font-semibold text-white">Bootstrap</h4>
-                                <p class="text-sm text-slate-400">Familiar</p>
+                                <p class="text-slate-400 text-sm">Familiar</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Backend Skills -->
-                <div class="p-8 glass-card">
-                    <h3 class="mb-6 text-2xl font-bold text-center text-white">Backend Development</h3>
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-bold text-white mb-6 text-center">Backend Development</h3>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="skill-item">
-                            <i class="text-2xl text-green-500 ri-nodejs-line"></i>
+                            <i class="ri-nodejs-line text-green-500 text-2xl"></i>
                             <div>
                                 <h4 class="font-semibold text-white">Node.js</h4>
-                                <p class="text-sm text-slate-400">Learning</p>
+                                <p class="text-slate-400 text-sm">Learning</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="text-2xl text-gray-400 ri-server-line"></i>
+                            <i class="ri-server-line text-gray-400 text-2xl"></i>
                             <div>
                                 <h4 class="font-semibold text-white">Express.js</h4>
-                                <p class="text-sm text-slate-400">Beginner</p>
+                                <p class="text-slate-400 text-sm">Beginner</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="text-2xl text-blue-400 ri-database-2-line"></i>
+                            <i class="ri-database-2-line text-blue-400 text-2xl"></i>
                             <div>
                                 <h4 class="font-semibold text-white">MongoDB</h4>
-                                <p class="text-sm text-slate-400">Beginner</p>
+                                <p class="text-slate-400 text-sm">Beginner</p>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="text-2xl text-orange-600 ri-git-branch-line"></i>
+                            <i class="ri-git-branch-line text-orange-600 text-2xl"></i>
                             <div>
                                 <h4 class="font-semibold text-white">Git & GitHub</h4>
-                                <p class="text-sm text-slate-400">Expert</p>
+                                <p class="text-slate-400 text-sm">Expert</p>
                             </div>
                         </div>
                     </div>
@@ -249,17 +252,17 @@
 
             <!-- Learning Progress -->
             <div class="mt-16">
-                <div class="p-8 glass-card" x-data="skillProgress">
-                    <h3 class="mb-8 text-2xl font-bold text-center text-white">Currently Learning</h3>
-                    <div class="grid items-center gap-8 md:grid-cols-2">
+                <div class="glass-card p-8" x-data="skillProgress">
+                    <h3 class="text-2xl font-bold text-white mb-8 text-center">Currently Learning</h3>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div class="grid grid-cols-2 gap-4">
                             <template x-for="skill in skills">
                                 <button 
                                     @click="currentSkill = skill"
                                     :class="currentSkill.name === skill.name ? 'ring-2 ring-purple-500' : ''"
-                                    class="p-4 text-left transition-colors border rounded-lg bg-slate-800/50 border-slate-700 hover:border-purple-500">
+                                    class="p-4 rounded-lg bg-slate-800/50 border border-slate-700 hover:border-purple-500 transition-colors text-left">
                                     <h4 class="font-semibold text-white" x-text="skill.name"></h4>
-                                    <p class="text-sm text-purple-300" x-text="skill.level + '%'"></p>
+                                    <p class="text-purple-300 text-sm" x-text="skill.level + '%'"></p>
                                 </button>
                             </template>
                         </div>
@@ -281,7 +284,7 @@
                                 <div class="absolute inset-0 flex items-center justify-center">
                                     <div class="text-center">
                                         <div class="text-3xl font-bold text-white" x-text="currentSkill.level + '%'"></div>
-                                        <div class="text-sm text-purple-300" x-text="currentSkill.name"></div>
+                                        <div class="text-purple-300 text-sm" x-text="currentSkill.name"></div>
                                     </div>
                                 </div>
                             </div>
@@ -293,18 +296,18 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="px-6 py-20">
+    <section id="projects" class="py-20 px-6">
         <div class="container mx-auto">
-            <div class="mb-16 text-center">
+            <div class="text-center mb-16">
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-subtitle">Some of my recent work</p>
             </div>
 
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <div class="project-card group">
                     <div class="project-image">
-                        <img src="./assets/project-1-1.png" alt="Plant Website" class="object-cover w-full h-48 rounded-t-xl">
+                        <img src="./assets/project-1-1.png" alt="Plant Website" class="w-full h-48 object-cover rounded-t-xl">
                         <div class="project-overlay">
                             <div class="flex gap-4">
                                 <a href="https://github.com/mahir-mahtab/Reponsive-Plant-Selling-Website.git" class="project-link">
@@ -317,8 +320,8 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="mb-2 text-xl font-bold text-white">Plant Selling Website</h3>
-                        <p class="mb-4 text-slate-400">Responsive e-commerce website for plant enthusiasts with modern design.</p>
+                        <h3 class="text-xl font-bold text-white mb-2">Plant Selling Website</h3>
+                        <p class="text-slate-400 mb-4">Responsive e-commerce website for plant enthusiasts with modern design.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -330,7 +333,7 @@
                 <!-- Project 2 -->
                 <div class="project-card group">
                     <div class="project-image">
-                        <img src="./assets/project3.png" alt="Simon Game" class="object-cover w-full h-48 rounded-t-xl">
+                        <img src="./assets/project3.png" alt="Simon Game" class="w-full h-48 object-cover rounded-t-xl">
                         <div class="project-overlay">
                             <div class="flex gap-4">
                                 <a href="https://github.com/mahir-mahtab/saimon-game.git" class="project-link">
@@ -343,8 +346,8 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="mb-2 text-xl font-bold text-white">Simon Memory Game</h3>
-                        <p class="mb-4 text-slate-400">Classic memory game built with vanilla JavaScript and responsive design.</p>
+                        <h3 class="text-xl font-bold text-white mb-2">Simon Memory Game</h3>
+                        <p class="text-slate-400 mb-4">Classic memory game built with vanilla JavaScript and responsive design.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">HTML</span>
@@ -356,7 +359,7 @@
                 <!-- Project 3 -->
                 <div class="project-card group">
                     <div class="project-image">
-                        <img src="./assets/project--2.png" alt="Paint App" class="object-cover w-full h-48 rounded-t-xl">
+                        <img src="./assets/project--2.png" alt="Paint App" class="w-full h-48 object-cover rounded-t-xl">
                         <div class="project-overlay">
                             <div class="flex gap-4">
                                 <a href="https://github.com/mahir-mahtab/Paint-App.git" class="project-link">
@@ -369,8 +372,8 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="mb-2 text-xl font-bold text-white">Digital Paint App</h3>
-                        <p class="mb-4 text-slate-400">Canvas-based drawing application with multiple tools and colors.</p>
+                        <h3 class="text-xl font-bold text-white mb-2">Digital Paint App</h3>
+                        <p class="text-slate-400 mb-4">Canvas-based drawing application with multiple tools and colors.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="tech-tag">Canvas API</span>
                             <span class="tech-tag">JavaScript</span>
@@ -382,7 +385,7 @@
                 <!-- Project 4 -->
                 <div class="project-card group">
                     <div class="project-image">
-                        <img src="./assets/project4.png" alt="Landing Page" class="object-cover w-full h-48 rounded-t-xl">
+                        <img src="./assets/project4.png" alt="Landing Page" class="w-full h-48 object-cover rounded-t-xl">
                         <div class="project-overlay">
                             <div class="flex gap-4">
                                 <a href="https://github.com/mahir-mahtab/landing-page.git" class="project-link">
@@ -395,8 +398,8 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="mb-2 text-xl font-bold text-white">Business Landing Page</h3>
-                        <p class="mb-4 text-slate-400">Modern business landing page with clean design and smooth animations.</p>
+                        <h3 class="text-xl font-bold text-white mb-2">Business Landing Page</h3>
+                        <p class="text-slate-400 mb-4">Modern business landing page with clean design and smooth animations.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -409,53 +412,53 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="px-6 py-20">
+    <section id="contact" class="py-20 px-6">
         <div class="container mx-auto">
-            <div class="mb-16 text-center">
+            <div class="text-center mb-16">
                 <h2 class="section-title">Get In Touch</h2>
                 <p class="section-subtitle">Let's build something amazing together</p>
             </div>
 
-            <div class="grid max-w-4xl gap-8 mx-auto lg:grid-cols-3">
-                <div class="p-8 text-center glass-card">
-                    <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-slate-700">
-                        <i class="text-2xl text-white ri-mail-line"></i>
+            <div class="grid lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="glass-card p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-mail-line text-2xl text-white"></i>
                     </div>
-                    <h3 class="mb-2 text-xl font-bold text-white">Email</h3>
-                    <p class="mb-4 text-slate-400">Drop me a message</p>
-                    <a href="mailto:mahir.official.04@gmail.com" class="font-medium text-slate-300 hover:text-white">
+                    <h3 class="text-xl font-bold text-white mb-2">Email</h3>
+                    <p class="text-slate-400 mb-4">Drop me a message</p>
+                    <a href="mailto:mahir.official.04@gmail.com" class="text-purple-400 hover:text-purple-300 font-medium">
                         mahir.official.04@gmail.com
                     </a>
                 </div>
 
-                <div class="p-8 text-center glass-card">
-                    <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-slate-700">
-                        <i class="text-2xl text-white ri-map-pin-line"></i>
+                <div class="glass-card p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-map-pin-line text-2xl text-white"></i>
                     </div>
-                    <h3 class="mb-2 text-xl font-bold text-white">Location</h3>
-                    <p class="mb-4 text-slate-400">Based in</p>
-                    <p class="font-medium text-slate-300">Lalbagh, Dhaka</p>
+                    <h3 class="text-xl font-bold text-white mb-2">Location</h3>
+                    <p class="text-slate-400 mb-4">Based in</p>
+                    <p class="text-purple-400 font-medium">Lalbagh, Dhaka</p>
                 </div>
 
-                <div class="p-8 text-center glass-card">
-                    <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-slate-700">
-                        <i class="text-2xl text-white ri-phone-line"></i>
+                <div class="glass-card p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-phone-line text-2xl text-white"></i>
                     </div>
-                    <h3 class="mb-2 text-xl font-bold text-white">Phone</h3>
-                    <p class="mb-4 text-slate-400">Give me a call</p>
-                    <a href="tel:+8801975714675" class="font-medium text-slate-300 hover:text-white">
+                    <h3 class="text-xl font-bold text-white mb-2">Phone</h3>
+                    <p class="text-slate-400 mb-4">Give me a call</p>
+                    <a href="tel:+8801975714675" class="text-purple-400 hover:text-purple-300 font-medium">
                         +880 197571 4675
                     </a>
                 </div>
             </div>
 
-            <div class="mt-12 text-center">
-                <div class="flex justify-center gap-6">
+            <div class="text-center mt-12">
+                <div class="flex gap-6 justify-center">
                     <a href="https://github.com/mahir-mahtab" class="social-link-large">
-                        <i class="text-2xl ri-github-fill"></i>
+                        <i class="ri-github-fill text-2xl"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/mahir-mahtab-295b0a275" class="social-link-large">
-                        <i class="text-2xl ri-linkedin-fill"></i>
+                        <i class="ri-linkedin-fill text-2xl"></i>
                     </a>
                 </div>
             </div>
@@ -463,7 +466,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="px-6 py-8 border-t border-slate-700/30">
+    <footer class="py-8 px-6 border-t border-purple-500/20">
         <div class="container mx-auto text-center">
             <p class="text-slate-400">
                 © <span id="year"></span> Mahir Mahtab. Built with passion and lots of coffee ☕
